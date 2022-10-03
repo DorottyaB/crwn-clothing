@@ -10,4 +10,10 @@
 - SASS
 - Styled components
 
+## Link
+
 [Live Demo](https://teal-daffodil-a9f65f.netlify.app)
+
+## Screenshot
+
+![](./preview.png)
