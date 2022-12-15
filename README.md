@@ -11,16 +11,10 @@
 - Styled components
 - SASS
 
-### Screenshot
-
-![](./crwn-clothing-preview.png)
-
 ### Links
-
-## Link
 
 [Live Demo](https://teal-daffodil-a9f65f.netlify.app)
 
-## Screenshot
+### Screenshot
 
-![](./preview.png)
+![](./crwn-clothing-preview.png)
