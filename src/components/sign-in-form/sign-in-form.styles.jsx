@@ -3,13 +3,24 @@ import styled from 'styled-components';
 export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 100%;
 
   h2 {
     margin: 10px 0;
   }
+
+  @media (min-width: 1024px) {
+    width: 380px;
+  }
 `;
 export const ButtonsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
 `;

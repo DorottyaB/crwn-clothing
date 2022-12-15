@@ -35,14 +35,14 @@ export const Body = styled.div`
 `;
 
 export const DirectoryItemContainer = styled.div`
-  min-width: 30%;
+  min-width: 100%;
   height: 240px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-  margin: 0 7.5px 15px;
+  margin-bottom: 15px;
   overflow: hidden;
 
   &:hover {
@@ -58,11 +58,16 @@ export const DirectoryItemContainer = styled.div`
     }
   }
 
-  &:first-child {
-    margin-right: 7.5px;
-  }
+  @media (min-width: 1024px) {
+    min-width: 30%;
+    margin: 0 7.5px 15px;
 
-  &:last-child {
-    margin-left: 7.5px;
+    &:first-child {
+      margin-right: 7.5px;
+    }
+
+    &:last-child {
+      margin-left: 7.5px;
+    }
   }
 `;

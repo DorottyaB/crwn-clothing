@@ -2,12 +2,19 @@
 
 ### A project created for ZTM's React Developer course
 
-## Technologies used:
+### Built with
 
 - React
 - React Router
 - Firebase
-- SASS
+- Mobile-first workflow
 - Styled components
+- SASS
+
+### Screenshot
+
+![](./crwn-clothing-preview.png)
+
+### Links
 
 [Live Demo](https://teal-daffodil-a9f65f.netlify.app)

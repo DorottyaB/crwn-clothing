@@ -2,16 +2,21 @@ import styled from 'styled-components';
 
 export const CheckoutItemContainer = styled.div`
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 23%) 16% 15%;
   min-height: 100px;
   border-bottom: 1px solid darkgrey;
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 23%) 8%;
+  }
 `;
 
 export const ImageContainer = styled.div`
-  width: 23%;
+  width: 100%;
   padding-right: 15px;
 `;
 
@@ -21,15 +26,15 @@ export const Img = styled.img`
 `;
 
 export const Name = styled.span`
-  width: 23%;
+  width: 100%;
 `;
 
 export const Price = styled.span`
-  width: 23%;
+  width: 100%;
 `;
 
 export const Quantity = styled.span`
-  width: 23%;
+  width: 100%;
   display: flex;
 `;
 export const Arrow = styled.div`
