@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 20px 40px;
+  padding: 20px 25px;
   font-family: 'Barlow Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,4 +17,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 20px 40px;
+  }
 }

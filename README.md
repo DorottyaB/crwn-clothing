@@ -1,19 +1,19 @@
 # CRWN CLOTHING - e-commerce site
 
-### A project created for ZTM's React Developer course
-
-## Technologies used:
+### Built with
 
 - React
 - React Router
+- Redux Toolkit
 - Firebase
-- SASS
+- Mobile-first workflow
 - Styled components
+- SASS
 
-## Link
+### Links
 
 [Live Demo](https://teal-daffodil-a9f65f.netlify.app)
 
-## Screenshot
+### Screenshot
 
-![](./preview.png)
+![](./crwn-clothing-preview.png)
