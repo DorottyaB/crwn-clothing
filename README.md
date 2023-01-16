@@ -5,6 +5,7 @@
 - React
 - React Router
 - Redux Toolkit
+- Redux Persist
 - Firebase
 - Mobile-first workflow
 - Styled components
