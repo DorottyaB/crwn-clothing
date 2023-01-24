@@ -15,6 +15,10 @@ const PaymentForm = () => {
   const amount = useSelector(selectCartTotal);
   const currentUser = useSelector(selectCurrentUser);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+  const [paymentCompleted, setPaymentCompleted] = useState({
+    isCompleted: false,
+    message: 'Payment Successful!',
+  });
 
   const paymentHandler = async e => {
     e.preventDefault();
@@ -49,23 +53,32 @@ const PaymentForm = () => {
     setIsProcessingPayment(false);
 
     if (paymentResult.error) {
-      alert(paymentResult.error);
+      alert('Please provide valid information');
     } else {
       if (paymentResult.paymentIntent.status === 'succeeded') {
-        alert('Payment Successful');
+        setPaymentCompleted(prevValue => {
+          return {
+            ...prevValue,
+            isCompleted: true,
+          };
+        });
       }
     }
   };
 
   return (
     <PaymentFormContainer>
-      <FormContainer onSubmit={paymentHandler}>
-        <h2>Credit Card Payment: </h2>
-        <CardElement />
-        <PaymentButton isLoading={isProcessingPayment} buttonType={BUTTON_TYPE_CLASSES.inverted}>
-          Pay now
-        </PaymentButton>
-      </FormContainer>
+      {paymentCompleted.isCompleted ? (
+        <h3>{paymentCompleted.message}</h3>
+      ) : (
+        <FormContainer onSubmit={paymentHandler}>
+          <h2>Credit Card Payment: </h2>
+          <CardElement />
+          <PaymentButton isLoading={isProcessingPayment} buttonType={BUTTON_TYPE_CLASSES.inverted}>
+            Pay now
+          </PaymentButton>
+        </FormContainer>
+      )}
     </PaymentFormContainer>
   );
 };
