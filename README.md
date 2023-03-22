@@ -14,7 +14,7 @@
 
 ### Link
 
-[Live Demo](https://teal-daffodil-a9f65f.netlify.app)
+[Live Demo](https://crwn-clothing-dorottyab.netlify.app/)
 
 ### Screenshot
 
