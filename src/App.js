@@ -22,6 +22,10 @@ const App = () => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
+      // To escape the non-serializable value error send back only the neccessary values, OR turn off the middleware in store
+      // const pickedUser = user && (({ accessToken, email }) => ({ accessToken, email }))(user);
+      // dispatch(setCurrentUser(pickedUser));
+
       dispatch(setCurrentUser(user));
     });
 
