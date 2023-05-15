@@ -5,9 +5,10 @@ import { useDispatch } from 'react-redux';
 import CategoriesPreview from '../categories-preview/categories-preview.component';
 import Category from '../category/category.component';
 import { fetchCategories } from '../../features/categories/categoriesSlice';
+import { AppDispatch } from '../../store';
 
 const Shop = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(fetchCategories());

@@ -7,13 +7,18 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
+  PersistConfig,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 import { configureStore } from '@reduxjs/toolkit';
-import { rootReducer } from './rootReducer';
+import { RootState, rootReducer } from './rootReducer';
 
-const persistConfig = {
+type ExtendedPersistedConfig = PersistConfig<RootState> & {
+  whitelist: (keyof RootState)[];
+};
+
+const persistConfig: ExtendedPersistedConfig = {
   key: 'root',
   storage,
   // blacklist: ['user'],
@@ -34,3 +39,4 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+export type AppDispatch = typeof store.dispatch;

@@ -1,6 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { CategoryItem } from '../categories/categoriesSlice';
 
-const CART_INITIAL_STATE = {
+export type CartItem = CategoryItem & {
+  quantity: number;
+};
+
+export interface CartState {
+  readonly isCartOpen: boolean;
+  readonly cartItems: CartItem[];
+}
+
+const CART_INITIAL_STATE: CartState = {
   isCartOpen: false,
   cartItems: [],
 };
@@ -25,9 +35,9 @@ export const cartSlice = createSlice({
         cartItem => cartItem.id === cartItemToRemove.id
       );
       // check if quantity is equal to 1, if it is remove that item from the cart
-      if (existingCartItem.quantity === 1) {
+      if (existingCartItem && existingCartItem.quantity === 1) {
         state.cartItems = state.cartItems.filter(cartItem => cartItem.id !== cartItemToRemove.id);
-      } else {
+      } else if (existingCartItem && existingCartItem.quantity > 1) {
         existingCartItem.quantity = existingCartItem.quantity - 1;
       }
     },
@@ -38,7 +48,7 @@ export const cartSlice = createSlice({
     setIsCartOpen(state, action) {
       state.isCartOpen = action.payload;
     },
-    clearCart(state, action) {
+    clearCart(state) {
       state.cartItems = [];
     },
   },
