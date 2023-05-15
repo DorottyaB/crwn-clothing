@@ -2,6 +2,7 @@
 
 ### Built with
 
+- TypeScript
 - React
 - React Router
 - Redux Toolkit
@@ -10,7 +11,6 @@
 - Stripe payment
 - Mobile-first workflow
 - Styled components
-- SASS
 
 ### Link
 
