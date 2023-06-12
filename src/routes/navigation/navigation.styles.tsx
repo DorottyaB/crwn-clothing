@@ -13,7 +13,7 @@ export const LogoContainer = styled(Link)`
   height: 100%;
   width: 70px;
   padding: 10px;
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     padding: 25px;
   }
 `;
@@ -24,7 +24,7 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     width: 50%;
   }
 `;

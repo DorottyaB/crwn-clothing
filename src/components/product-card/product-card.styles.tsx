@@ -18,7 +18,7 @@ export const ProductCardContainer = styled.div`
     margin-top: 10px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     height: 350px;
 
     img {
@@ -55,13 +55,13 @@ export const Footer = styled.div`
 export const Name = styled.span`
   margin-bottom: 15px;
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     width: 90%;
   }
 `;
 
 export const Price = styled.span`
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     width: 10%;
   }
 `;

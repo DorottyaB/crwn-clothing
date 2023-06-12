@@ -62,7 +62,7 @@ export const DirectoryItemContainer = styled.div`
     }
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     min-width: 30%;
     margin: 0 7.5px 15px;
 

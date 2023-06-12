@@ -19,7 +19,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   body {
     padding: 20px 40px;
   }

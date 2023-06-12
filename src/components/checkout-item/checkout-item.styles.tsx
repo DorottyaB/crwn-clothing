@@ -10,7 +10,7 @@ export const CheckoutItemContainer = styled.div`
   font-size: 20px;
   align-items: center;
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(4, 23%) 8%;
   }
 `;

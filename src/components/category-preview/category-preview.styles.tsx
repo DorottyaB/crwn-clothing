@@ -19,7 +19,7 @@ export const Preview = styled.div`
   column-gap: 20px;
   row-gap: 30px;
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
     row-gap: 0;
   }

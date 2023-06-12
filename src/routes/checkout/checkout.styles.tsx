@@ -8,7 +8,7 @@ export const CheckoutContainer = styled.div`
   align-items: center;
   margin: 50px auto 0;
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     width: 55%;
   }
 `;
@@ -20,7 +20,7 @@ export const CheckoutHeader = styled.div`
   grid-template-columns: repeat(3, 23%) 16% 15%;
   border-bottom: 1px solid darkgrey;
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(4, 23%) 8%;
   }
 `;

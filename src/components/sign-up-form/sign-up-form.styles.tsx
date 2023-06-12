@@ -9,7 +9,7 @@ export const SignUpContainer = styled.div`
     margin: 10px 0;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     width: 380px;
   }
 `;
@@ -18,7 +18,7 @@ export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     flex-direction: row;
   }
 `;
